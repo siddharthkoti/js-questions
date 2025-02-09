@@ -19,8 +19,14 @@
         </div>
       </div>
 
-      <button onclick="throttledClick('helloSId', '2nd arguent')">
+      <button id="clickMe" onclick="throttledClick('helloSId', '2nd arguent')">
         click Me
+      </button>
+      <button id="clickMeEventListener">
+        click Me(with event listener - Debounce)
+      </button>
+      <button id="clickMeEventListenerThrottle">
+        click Me(with event listener - Throttle)
       </button>
 </body>
 </html>
