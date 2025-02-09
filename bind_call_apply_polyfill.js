@@ -54,3 +54,4 @@ Function.prototype.myApply = function(context, [...args]) {
 }
 printName.myApply(user,['Doe', 'myApply']);
 console.log(user);
+
