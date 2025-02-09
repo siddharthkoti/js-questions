@@ -1,5 +1,6 @@
 # js-questions
 
+This repo has some interesting implementations of JS questions which can be useful in day today coding and in the interviews.
 questions:
 
 - bind, call & apply polyfills
