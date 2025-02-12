@@ -21,3 +21,4 @@ questions:
 - retry api call for n counts
 - useContext template in React
 - LRU Cache
+- memoize function
