@@ -5,14 +5,14 @@
 // both put and get are considered as a noperation of 'used' 
 // - so whichever key is fetched or set, its the most recently used  
 
-// LRU implementation in JS
 // {
 //    {key1: 11} -> least Recently used
 //    {key2: 11}
 //    {key3: 11}  -> most recently used
 // }
 // 
-
+    
+    // LRU implementation in JS
 class LRUCache { 
     constructor(capacity) {
         this.capacity = capacity;

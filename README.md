@@ -20,3 +20,4 @@ questions:
 - resolve promise parallely
 - retry api call for n counts
 - useContext template in React
+- LRU Cache

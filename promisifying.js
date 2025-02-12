@@ -1,7 +1,11 @@
 
 function wait(seconds) {
     return new Promise(function(resolve) {
-        setTimeout(resolve, seconds * 1000);
+        setTimeout(() => {
+            resolve();
+        }, seconds * 1000); 
+        // which can also be written as 
+        // setTimeout(resolve, seconds * 1000); 
     })
 }
 
