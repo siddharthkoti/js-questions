@@ -22,3 +22,4 @@ questions:
 - useContext template in React
 - LRU Cache
 - memoize function
+- currying - infinte currying
