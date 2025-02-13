@@ -182,3 +182,18 @@ observer.observe(element);
 observe.unobserve(element);
 
 observer.disconnect(); // in the cleanup
+
+
+- localStorage and sessionStorage 
+Local storage works by accepting data in key-value pairs. 
+It retains the data even when the user refreshes the page or closes the tab or browser
+Local storage can only store strings
+if you need to store values like objects or arrays, you first need to get a string representation of the value. 
+You do this using the JSON.stringify()
+
+localStorage.setItem(key, value);
+const cat = localStorage.getItem(key);
+localStorage.removeItem(key)
+localStorage.clear(); // clear all localstorage
+
+similar for sessionStorage

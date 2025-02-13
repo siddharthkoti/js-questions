@@ -23,3 +23,4 @@ questions:
 - LRU Cache
 - memoize function
 - currying - infinte currying
+- flatten

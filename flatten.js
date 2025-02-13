@@ -36,4 +36,3 @@ const testArray2 = [1,2, [3,4,5], 6, [7,8, [9, 10, [22,99]]], 10];
 
 console.log(flattenWithoutDepth(testArray1));
 console.log(flatten(testArray2, 2));
-// list with unique entries - which can be accessed by index 
