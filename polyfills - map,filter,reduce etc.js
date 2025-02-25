@@ -1,4 +1,4 @@
-// ployfill for map
+// polyfill for map
 
 
 Array.prototype.myMap = function(cb) {

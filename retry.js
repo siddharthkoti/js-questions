@@ -1,6 +1,6 @@
 // problem statement: 
 // Create a retry function which takes 2 params, a callback on which retry is to be made and no of retries.
-// it has to return a promise, returns data id resolved or else returns err if failed after n no of retries
+// it has to return a promise, which returns data if resolved, else returns error if failed after n no of retries
 
 
 function retry(fetcher, retries) {

@@ -12,7 +12,7 @@
 // }
 // 
     
-    // LRU implementation in JS
+// LRU implementation in JS
 class LRUCache { 
     constructor(capacity) {
         this.capacity = capacity;

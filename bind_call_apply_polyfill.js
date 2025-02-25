@@ -21,7 +21,7 @@ Function.prototype.myBind = function(context, ...args) { // args: arguments pass
     }   
 }
 
-const printNameMyBind = printName.bind(user, 'Doe');
+const printNameMyBind = printName.myBind(user, 'Doe');
 printNameMyBind('myBind'); // John Doe
 
 // -------------------------------- call ---------------------------------------------
