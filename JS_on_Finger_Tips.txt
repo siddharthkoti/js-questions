@@ -66,7 +66,7 @@ Array.isArray();
 arr.includes();
 arr.slice(start, end) // end index not included
 arr.splice(start, deleteCount, item1, item2, /* …, */ itemN); // item1, item2 ...itemN are items to be added
-
+arr.flat() // give number as param to flat till that depth, or pass 'Infinity'
 delete an element at an index: use splice: arr.splice(index, 1);
 
 const firstElement = array1.shift(); // removes 1st ele and returns
@@ -145,7 +145,6 @@ note: animation keyframes remove all the property in the keyframe once its done 
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 	}
 2. using translate & adsolute(make parent as relative):
 	div {
@@ -155,6 +154,19 @@ note: animation keyframes remove all the property in the keyframe once its done 
 		left: 50%;
 		transform: translate(-50%, -50%)
 	}
+
+
+
+use of grid to make square boxes (say 3 X 3)
+config = [ [1,1,1],
+		   [1,0,1],
+		   [1,1,1],
+		 ]
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
 
 things to note while making fetch call in React useEfect. 
  - use of abortController.
