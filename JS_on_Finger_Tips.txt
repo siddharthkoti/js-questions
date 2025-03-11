@@ -58,13 +58,15 @@ String.prototype.substring(startIndex, endIndexExcluded || tillEnd) ; endIndexEx
 String.prototype.toLowerCase()
 String.prototype.toUpperCase()
 String.prototype.trim()
+String.prototype.substring(start, end) // end index not included - returns a new copy
+String.prototype.slice(start, end) // end index not included - returns a new copy of sliced array(both substring and slice on string are same)
 string.length
 
 Array Methods:
 
 Array.isArray();
 arr.includes();
-arr.slice(start, end) // end index not included
+arr.slice(start, end) // end index not included - can use negative index also for end
 arr.splice(start, deleteCount, item1, item2, /* …, */ itemN); // item1, item2 ...itemN are items to be added
 arr.flat() // give number as param to flat till that depth, or pass 'Infinity'
 delete an element at an index: use splice: arr.splice(index, 1);
@@ -89,6 +91,7 @@ m.values() -> returns Iterator object -> -> iterate using next() -> and use next
 
 m.keys().next().value -> returns the first value
 iteration: 
+
 for (const [key, value] of myMap) {
   console.log(`${key} = ${value}`);
 }
@@ -97,6 +100,9 @@ Set in js:
 
 const s = new Set([1,2,3,4]);
 s.add(5); // all other functions are same in map
+
+s.has(key)
+s.delete(key)
 to convert back to array -> arr = [...s]; // use spread operator
 ****************************************
 Form data concept
@@ -209,3 +215,8 @@ localStorage.removeItem(key)
 localStorage.clear(); // clear all localstorage
 
 similar for sessionStorage
+
+
+
+maximum value of a number: Number.MAX_VALUE;
+minimum value of a number: Number.MIN_VALUE;
