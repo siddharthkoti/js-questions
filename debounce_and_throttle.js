@@ -28,6 +28,7 @@ function clicked(n, m) {
 
 function debounce(fn, delay) {
     let id; // id should be declared outside else it wont work
+    // it should remember the last id 
     return function (...args) {
         // this function will be called
 

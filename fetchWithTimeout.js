@@ -1,3 +1,6 @@
+// write a function where in it returns a promise, it calls the api, and if api fails to return any response in 
+// 'x' time, then abort it 
+
 function fetchWithTimeOut(url, timeout) {
     return new Promise((resolve, reject) => {
       const controller = new AbortController();

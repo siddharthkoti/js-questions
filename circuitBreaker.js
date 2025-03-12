@@ -1,4 +1,4 @@
-// implement a curcuit breaker, that halts the function for x time if it fails for y count.
+// implement a curcuit breaker, that halts the function for 'delay' time if it fails for y count.
 
 
 const circuitBreaker = function (fn, failureCount, delay) {
@@ -8,7 +8,7 @@ const circuitBreaker = function (fn, failureCount, delay) {
 
     return (...args) => {
         if (!flag) {
-            console.log('circuit is in dealy due to errors');
+            console.log('circuit is in delay due to errors');
             return;
         }
         try {

@@ -6,7 +6,7 @@ function findByClassName(root, className) {
       }
       
       for(let child of node.children) {
-        result = [...result, search(child)]; // or use result.concat(search(node));
+        result = [...result, ...search(child)]; // or use result.concat(search(node));
       }
       return result;
     }
@@ -19,7 +19,7 @@ function findByClassName(root, className) {
   const result = findByClassName(root, 'a')
   console.log(result);
 
-//   DOM
+// DOM
 {/* <html lang="en">
 <head>
     <meta charset="UTF-8">

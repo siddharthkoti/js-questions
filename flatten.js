@@ -1,4 +1,4 @@
-// flatten the array to a depth on n 
+// flatten the array to a depth 'n' 
 
 
 function flattenWithoutDepth(array) {
