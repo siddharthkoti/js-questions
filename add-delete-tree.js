@@ -44,7 +44,7 @@ const addToList = (root, parentId, name, isFolder = false) => {
       return {
         ...node,
         children: [
-          ...node.children,
+          ...addToList(node.children, parentId, name, isFolder),
           {
             id: Date.now(),
             name,
@@ -75,7 +75,9 @@ const deleteNodeFromList = (list, id) => {
     .map((node) => {
       if (node.children.length) {
         return { ...node, children: deleteNodeFromList(node.children, id) };
-      } else return node;
+      } else { 
+        return node;
+      }
     });
 };
 
