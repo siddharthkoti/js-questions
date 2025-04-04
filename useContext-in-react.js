@@ -3,7 +3,7 @@
 // step1: create a file themeProvider.js inside a folder: context 
 import React, {useState} from 'react';
 
-export const ThemeContext = React.createContext();  // used inside useContext
+export const ThemeContext = React.createContext();  // used inside useContext & provider
 
 export const ThemeProvider = ({children}) => { // used in appContainer
 
