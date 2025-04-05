@@ -35,36 +35,42 @@ function sortPair(pairArr) {
 })
 }
 
-const size = [3,3,3,2];
-const cost = [2,4,5,1];
+function minCostForSize(size, cost) {
 
-let a = createPair(size, cost);
-
-console.log(a)
-
-a = sortPair(a);
-
-const n = a.length;
-let totalCost = 0
-
-for(let i = 0; i< n-1;) {
-    let j = i + 1;
-    let minCostIndex = i;
-    while((j < n) && a[i][0] === a[j][0]) {
-        if(a[j][1] < a[minCostIndex][1]) {
-            minCostIndex = j;
-        }
-        j++;
-    }
+    let a = createPair(size, cost);
     
-    if(j !== i+1) {
-        totalCost += a[minCostIndex][1];    
-        a[minCostIndex][0] = a[minCostIndex][0] + 1;
-    } else {
-        i++;
-    }
+    console.log(a)
     
     a = sortPair(a);
+    
+    const n = a.length;
+    let totalCost = 0
+    
+    for(let i = 0; i< n-1;) {
+        let j = i + 1;
+        let minCostIndex = i;
+        while((j < n) && a[i][0] === a[j][0]) {
+            // if(a[j][1] < a[minCostIndex][1]) {
+            //     minCostIndex = j;
+            // }
+            j++;
+        }
+        
+        if(j !== i+1) {
+            totalCost += a[minCostIndex][1];    
+            a[minCostIndex][0] = a[minCostIndex][0] + 1;
+        } else {
+            i++;
+        }
+        
+        a = sortPair(a);
+    }
+
+    return totalCost;
+
+    // complexity: O(n^2logn)
 }
 
-console.log('Total Cost:', totalCost)
+
+console.log(minCostForSize([2,3,3,2], [2,4,5,1]));
+console.log(minCostForSize([3,3,4,5], [5,2,2,1]));
