@@ -71,6 +71,5 @@ function minCostForSize(size, cost) {
     // complexity: O(n^2logn)
 }
 
-
 console.log(minCostForSize([2,3,3,2], [2,4,5,1]));
 console.log(minCostForSize([3,3,4,5], [5,2,2,1]));
