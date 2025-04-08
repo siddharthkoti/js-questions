@@ -1,3 +1,24 @@
+Why should we not have the hooks inside conditional statements?
+- Hooks in React should not be placed inside conditional statements because React relies 
+  on the order of hooks to manage their state and behavior. 
+  If hooks are placed inside conditional statements, the order in which they are called 
+  can change between renders, leading to unpredictable behavior and errors.
+
+### Key reasons:
+1. Rules of Hooks: React enforces the "Rules of Hooks" which state that hooks must be called 
+   in the same order on every render. Conditional statements can break this rule.
+   
+2. State Mismatch: React uses the order of hooks to associate state and effects with components. 
+   Changing the order can cause React to associate the wrong state or effect with the wrong hook.
+
+3. Runtime Errors: Violating the rules of hooks can lead to errors like:
+   - "React Hook "useState" is called conditionally. 
+   	  React Hooks must be called in the exact same order in every component render".
+   - Unexpected behavior in the application.
+
+
+
+
 1. You notice that one of our Next.js pages takes too long to render on the client side. The API response time is fast, but the page load is still slow. How would you debug and optimize it?
 
 	2. "Two teams work on different microfrontends using Module Federation. Team A updates a shared component’s API, breaking Team B’s implementation. Production goes down. You get the alert. How do you debug and fix this without taking the entire app offline?"
